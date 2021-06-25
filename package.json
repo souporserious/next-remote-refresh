@@ -4,6 +4,7 @@
   "description": "Enables Fast Refresh for remote data in NextJS.",
   "author": "Travis Arnold",
   "license": "MIT",
+  "main": "index.js",
   "bin": {
     "next-remote-refresh": "./bin/next-remote-refresh.js"
   },
