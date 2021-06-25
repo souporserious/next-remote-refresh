@@ -4,10 +4,12 @@
   "description": "Enables Fast Refresh for remote data in NextJS.",
   "author": "Travis Arnold",
   "license": "MIT",
-  "main": "index.js",
+  "bin": {
+    "next-remote-refresh": "./bin/next-remote-refresh"
+  },
   "files": [
     "bin",
-    "index.js"
+    "hook.js"
   ],
   "repository": {
     "type": "git",
@@ -19,9 +21,6 @@
     "remote",
     "fast-refresh"
   ],
-  "bin": {
-    "next-remote-refresh": "./bin/next-remote-refresh"
-  },
   "peerDependencies": {
     "next": ">9.0.0",
     "react": ">16.0.0"

@@ -1,6 +1,6 @@
 import path from 'path'
 import fs from 'fs'
-import { useRemoteRefresh } from 'next-remote-refresh'
+import { useRemoteRefresh } from 'next-remote-refresh/hook'
 
 export default function Index({ name, version, description }) {
   useRemoteRefresh()
