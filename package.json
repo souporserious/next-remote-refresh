@@ -5,7 +5,7 @@
   "author": "Travis Arnold",
   "license": "MIT",
   "bin": {
-    "next-remote-refresh": "./bin/next-remote-refresh"
+    "next-remote-refresh": "./bin/next-remote-refresh.js"
   },
   "files": [
     "bin",
