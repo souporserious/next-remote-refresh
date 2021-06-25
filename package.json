@@ -1,0 +1,39 @@
+{
+  "name": "next-remote-refresh",
+  "version": "0.1.0",
+  "description": "Enables Fast Refresh for remote data in NextJS.",
+  "author": "Travis Arnold",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "bin",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/souporserious/next-remote-refresh"
+  },
+  "keywords": [
+    "next",
+    "refresh",
+    "remote",
+    "fast-refresh"
+  ],
+  "bin": {
+    "next-remote-refresh": "./bin/next-remote-refresh"
+  },
+  "peerDependencies": {
+    "next": ">9.0.0",
+    "react": ">16.0.0"
+  },
+  "devDependencies": {
+    "next": "^11.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.2",
+    "express": "^4.17.1",
+    "ws": "^7.5.0"
+  }
+}

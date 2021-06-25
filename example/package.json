@@ -1,0 +1,11 @@
+{
+  "name": "example",
+  "version": "0.0.0",
+  "private": "true",
+  "scripts": {
+    "dev": "node ../bin/next-remote-refresh ../package.json & next dev"
+  },
+  "dependencies": {
+    "next": "^11.0.1"
+  }
+}
