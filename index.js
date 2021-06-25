@@ -1,7 +1,7 @@
 const { useEffect } = require('react')
 const { useRouter } = require('next/router')
 
-export function useRemoteRefresh({
+module.exports.useRemoteRefresh = function ({
   port = 3001,
   shouldRefresh = (event, router) => true,
 } = {}) {
