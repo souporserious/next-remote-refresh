@@ -9,6 +9,7 @@ const chokidar = require('chokidar')
 const [paths, ...options] = process.argv.slice(2)
 const port = options.find((option) => option.includes('port'))
 const ignore = options.find((option) => option.includes('ignore'))
+const parseOption = (option) => (option ? option.split('=')[1] : null)
 
 const app = express()
 const server = http.createServer(app)
@@ -22,16 +23,18 @@ wss.on('connection', (ws) => {
   })
 })
 
-server.listen(port ? port.split('=')[1] : 3001)
+server.listen(parseInt(parseOption(port)) || 3001)
 
 chokidar
   .watch(
     (Array.isArray(paths) ? paths : [paths]).map((filePath) =>
       path.resolve(process.cwd(), filePath)
     ),
-    { ignored: ignore }
+    { ignored: parseOption(ignore) }
   )
-  .on('change', (event, filePath) => {
-    console.log(`${filePath} updated`)
-    sockets.map((socket) => socket.send(filePath))
+  .on('change', (filePath) => {
+    const baseName = path.basename(path.dirname(process.cwd()))
+    const updatedPath = `${baseName}${filePath.split(baseName)[1]}`
+    console.log(`${path.basename(filePath)} updated`)
+    sockets.map((socket) => socket.send(updatedPath))
   })
