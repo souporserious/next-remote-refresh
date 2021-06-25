@@ -6,7 +6,9 @@ const path = require('path')
 const WebSocket = require('ws')
 const chokidar = require('chokidar')
 
-const [paths, port] = process.argv.slice(2)
+const [paths, ...options] = process.argv.slice(2)
+const port = options.find((option) => option.includes('port'))
+const ignore = options.find((option) => option.includes('ignore'))
 
 const app = express()
 const server = http.createServer(app)
@@ -26,9 +28,10 @@ chokidar
   .watch(
     (Array.isArray(paths) ? paths : [paths]).map((filePath) =>
       path.resolve(process.cwd(), filePath)
-    )
+    ),
+    { ignored: ignore }
   )
-  .on('all', (event, filePath) => {
+  .on('change', (event, filePath) => {
     console.log(`${filePath} updated`)
     sockets.map((socket) => socket.send(filePath))
   })
