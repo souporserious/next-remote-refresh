@@ -8,12 +8,12 @@ module.exports = function plugin(options) {
       if (!port) {
         port = createServer(options);
       }
-    }
 
-    nextConfig.publicRuntimeConfig = {
-      ...nextConfig.publicRuntimeConfig,
-      __remoteRefreshPath: `http://localhost:${port}/refresh`,
-    };
+      nextConfig.publicRuntimeConfig = {
+        ...nextConfig.publicRuntimeConfig,
+        __remoteRefreshPath: `http://localhost:${port}/refresh`,
+      };
+    }
 
     return nextConfig;
   };
