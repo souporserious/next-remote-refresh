@@ -1,26 +1,22 @@
-const { useEffect } = require('react')
-const { useRouter } = require('next/router')
+const path = require('path')
+const { createServer } = require('./server')
 
-module.exports.useRemoteRefresh = function ({
-  port = 3001,
-  shouldRefresh = (event, router) => true,
-} = {}) {
-  if (process.env.NODE_ENV === 'development') {
-    const router = useRouter()
-    const refreshData = () => {
-      const scrollY = window.pageYOffset
-      router.replace(router.asPath).then(() => {
-        window.scrollTo(0, scrollY)
-      })
-    }
-    useEffect(() => {
-      const ws = new WebSocket(`ws://localhost:${port}/ws`)
-      ws.onmessage = (event) => {
-        if (shouldRefresh(event.data, router)) {
-          refreshData()
+module.exports = (pluginOptions) => {
+  createServer(pluginOptions)
+  return (nextConfig = {}) => {
+    return Object.assign({}, nextConfig, {
+      webpack(config, options) {
+        config.module.rules.unshift({
+          test: /\.(js|jsx|ts|tsx)$/,
+          use: [{ loader: path.resolve(__dirname, 'loader') }],
+        })
+
+        if (typeof nextConfig.webpack === 'function') {
+          return nextConfig.webpack(config, options)
         }
-      }
-      return () => ws.close()
-    }, [])
+
+        return config
+      },
+    })
   }
 }

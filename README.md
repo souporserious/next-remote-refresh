@@ -16,12 +16,18 @@ npm install next-remote-refresh --save-dev
 
 [View Example](/example)
 
-```json
-{
-  "scripts": {
-    "dev": "next-remote-refresh ../docs & next dev"
-  }
-}
+### Plugin
+
+```js
+// next.config.js
+const withRemoteRefresh = require('next-remote-refresh')({
+  paths: ['files', 'to', 'watch'],
+  port: 3001, // port for web socket server
+  ignored: '**/*.json', // files to skip
+})
+module.exports = withRemoteRefresh({
+  // next config options here
+})
 ```
 
 ### `useRemoteRefresh`
@@ -33,7 +39,8 @@ import path from 'path'
 function App({ name, version }) {
   useRemoteRefresh({
     shouldRefresh: (path, router) => {
-      // do something based on changed file path
+      // control when the page should refresh
+      return true
     },
   })
   return (

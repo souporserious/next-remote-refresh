@@ -10,7 +10,10 @@
   },
   "files": [
     "bin",
-    "hook.js"
+    "hook.js",
+    "index.js",
+    "loader.js",
+    "server.js"
   ],
   "repository": {
     "type": "git",
