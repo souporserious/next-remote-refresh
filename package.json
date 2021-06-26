@@ -5,11 +5,7 @@
   "author": "Travis Arnold",
   "license": "MIT",
   "main": "index.js",
-  "bin": {
-    "next-remote-refresh": "./bin/next-remote-refresh.js"
-  },
   "files": [
-    "bin",
     "hook.js"
   ],
   "repository": {
@@ -33,7 +29,6 @@
   },
   "dependencies": {
     "chokidar": "^3.5.2",
-    "express": "^4.17.1",
-    "ws": "^7.5.0"
+    "shortid": "^2.2.16"
   }
 }

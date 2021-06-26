@@ -16,12 +16,15 @@ npm install next-remote-refresh --save-dev
 
 [View Example](/example)
 
-```json
-{
-  "scripts": {
-    "dev": "next-remote-refresh ../docs & next dev"
-  }
-}
+Add plugin in `next.config.js`
+
+```js
+// next.config.js
+const withRemoteRefresh = require('next-remote-refresh/plugin')({
+  paths: [
+    path.resolve(__dirname, './package.json'),
+  ]
+});
 ```
 
 ### `useRemoteRefresh`
@@ -32,7 +35,7 @@ import path from 'path'
 
 function App({ name, version }) {
   useRemoteRefresh({
-    shouldRefresh: (path, router) => {
+    shouldRefresh: (path) => {
       // do something based on changed file path
     },
   })
