@@ -25,6 +25,8 @@ const withRemoteRefresh = require('next-remote-refresh/plugin')({
     path.resolve(__dirname, './package.json'),
   ]
 });
+
+module.exports = withRemoteRefresh(nextConfig);
 ```
 
 ### `useRemoteRefresh`
