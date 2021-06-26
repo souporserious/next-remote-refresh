@@ -43,7 +43,7 @@ function App({ name, version }) {
   )
 }
 
-export function useStaticProps() {
+export function getStaticProps() {
   return {
     props: path.resolve(process.cwd(), './package.json', 'utf-8'),
   }
