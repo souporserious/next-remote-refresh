@@ -6,7 +6,8 @@
   "license": "MIT",
   "main": "index.js",
   "files": [
-    "hook.js"
+    "plugin.js",
+    "server.js"
   ],
   "repository": {
     "type": "git",

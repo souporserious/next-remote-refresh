@@ -1,28 +1,20 @@
-const { useEffect } = require('react')
-const { useRouter } = require('next/router')
-const getConfig = require('next/config').default;
+const createServer = require('./server')
 
-// private API, might break on the next version
-const { getEventSourceWrapper } = require('next/dist/client/dev/error-overlay/eventsource');
+let port
 
-module.exports.useRemoteRefresh = function ({
-  shouldRefresh = (path) => true,
-} = {}) {
-  if (process.env.NODE_ENV !== 'production') {
-    const remoteRefreshPath = getConfig().publicRuntimeConfig.__remoteRefreshPath;
-    const router = useRouter()
+module.exports = function plugin(options) {
+  return function withConfig(nextConfig = {}) {
+    if (process.env.NODE_ENV !== 'production') {
+      if (!port) {
+        port = createServer(options)
+      }
 
-    useEffect(() => {
-      const source = getEventSourceWrapper({ path: remoteRefreshPath });
-      source.addMessageListener((evt) => {
-        if (shouldRefresh(JSON.parse(evt.data).path)) {
-          router.replace(router.asPath, router.asPath, {
-            scroll: false,
-          });
-        }
-      });
+      nextConfig.publicRuntimeConfig = {
+        ...nextConfig.publicRuntimeConfig,
+        __remoteRefreshPath: `http://localhost:${port}/refresh`,
+      }
+    }
 
-      return () => source.close()
-    }, [])
+    return nextConfig
   }
 }

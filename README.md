@@ -2,6 +2,10 @@
 
 Utilize Fast Refresh for remote data in NextJS.
 
+<small>
+⚠️ This solution relies on undocumented APIs and may break in future NextJS updates.
+</small>
+
 ## Install
 
 ```bash
@@ -14,19 +18,15 @@ npm install next-remote-refresh --save-dev
 
 ## Usage
 
-[View Example](/example)
-
-Add plugin in `next.config.js`
+Add plugin in `next.config.js`:
 
 ```js
 // next.config.js
 const withRemoteRefresh = require('next-remote-refresh/plugin')({
-  paths: [
-    path.resolve(__dirname, './package.json'),
-  ]
-});
+  paths: [require('path').resolve(__dirname, './package.json')],
+})
 
-module.exports = withRemoteRefresh(nextConfig);
+module.exports = withRemoteRefresh(nextConfig)
 ```
 
 ### `useRemoteRefresh`
@@ -38,7 +38,7 @@ import path from 'path'
 function App({ name, version }) {
   useRemoteRefresh({
     shouldRefresh: (path) => {
-      // do something based on changed file path
+      // determine when to refresh based on changed path
     },
   })
   return (
@@ -65,6 +65,8 @@ yarn dev
 ```
 
 ## Related
+
+[Refreshing Server-Side Props](https://www.joshwcomeau.com/nextjs/refreshing-server-side-props/)
 
 [next-remote-watch](https://github.com/hashicorp/next-remote-watch)
 
