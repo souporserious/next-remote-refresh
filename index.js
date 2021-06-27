@@ -1,26 +1,28 @@
 const { useEffect } = require('react')
 const { useRouter } = require('next/router')
+const getConfig = require('next/config').default;
+
+// private API, might break on the next version
+const { getEventSourceWrapper } = require('next/dist/client/dev/error-overlay/eventsource');
 
 module.exports.useRemoteRefresh = function ({
-  port = 3001,
-  shouldRefresh = (event, router) => true,
+  shouldRefresh = (path) => true,
 } = {}) {
-  if (process.env.NODE_ENV === 'development') {
+  if (process.env.NODE_ENV !== 'production') {
+    const remoteRefreshPath = getConfig().publicRuntimeConfig.__remoteRefreshPath;
     const router = useRouter()
-    const refreshData = () => {
-      const scrollY = window.pageYOffset
-      router.replace(router.asPath).then(() => {
-        window.scrollTo(0, scrollY)
-      })
-    }
+
     useEffect(() => {
-      const ws = new WebSocket(`ws://localhost:${port}/ws`)
-      ws.onmessage = (event) => {
-        if (shouldRefresh(event.data, router)) {
-          refreshData()
+      const source = getEventSourceWrapper({ path: remoteRefreshPath });
+      source.addMessageListener((evt) => {
+        if (shouldRefresh(JSON.parse(evt.data).path)) {
+          router.replace(router.asPath, router.asPath, {
+            scroll: false,
+          });
         }
-      }
-      return () => ws.close()
+      });
+
+      return () => source.close()
     }, [])
   }
 }
