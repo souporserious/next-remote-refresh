@@ -32,7 +32,7 @@ module.exports = withRemoteRefresh(nextConfig)
 ### `useRemoteRefresh`
 
 ```jsx
-import { useRemoteRefresh } from 'next-remote-refresh'
+import { useRemoteRefresh } from 'next-remote-refresh/hook'
 import path from 'path'
 
 function App({ name, version }) {
