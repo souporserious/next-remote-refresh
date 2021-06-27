@@ -22,7 +22,7 @@ Add plugin in `next.config.js`:
 
 ```js
 // next.config.js
-const withRemoteRefresh = require('next-remote-refresh/plugin')({
+const withRemoteRefresh = require('next-remote-refresh')({
   paths: [require('path').resolve(__dirname, './package.json')],
 })
 
