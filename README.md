@@ -18,28 +18,33 @@ npm install next-remote-refresh --save-dev
 
 ## Usage
 
-Add plugin in `next.config.js`:
+### plugin
+
+Add and configure plugin in `next.config.js`:
 
 ```js
 // next.config.js
 const withRemoteRefresh = require('next-remote-refresh')({
   paths: [require('path').resolve(__dirname, './package.json')],
+  ignored: '**/*.json',
 })
 
 module.exports = withRemoteRefresh(nextConfig)
 ```
 
-### `useRemoteRefresh`
+### `useRemoteRefresh` hook
+
+Add the `useRemoteRefresh` hook to the top-level component in your app. You may also configure when the app should refresh based on the changed `path`:
 
 ```jsx
+import { useRouter } from 'next/router'
 import { useRemoteRefresh } from 'next-remote-refresh/hook'
 import path from 'path'
 
 function App({ name, version }) {
+  const router = useRouter()
   useRemoteRefresh({
-    shouldRefresh: (path) => {
-      // determine when to refresh based on changed path
-    },
+    shouldRefresh: (path) => path.includes(router.query.slug),
   })
   return (
     <div>
