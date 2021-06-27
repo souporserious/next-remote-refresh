@@ -1,0 +1,34 @@
+{
+  "projectName": "next-remote-refresh",
+  "projectOwner": "souporserious",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "souporserious",
+      "name": "Travis Arnold",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2762082?v=4",
+      "profile": "https://github.com/souporserious",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "joshwcomeau",
+      "name": "Joshua Comeau",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6692932?v=4",
+      "profile": "https://github.com/joshwcomeau",
+      "contributions": [
+        "ideas"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
