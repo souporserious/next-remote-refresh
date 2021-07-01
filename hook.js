@@ -17,6 +17,11 @@ module.exports.useRemoteRefresh = function ({
     useEffect(() => {
       const source = getEventSourceWrapper({ path: remoteRefreshPath })
       source.addMessageListener((event) => {
+        // heartbeat
+        if (event.data === '\uD83D\uDC93') {
+          return
+        }
+        
         if (shouldRefresh(JSON.parse(event.data).path)) {
           router.replace(router.asPath, router.asPath, {
             scroll: false,
