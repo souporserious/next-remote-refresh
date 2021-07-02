@@ -33,10 +33,12 @@ module.exports.useRemoteRefresh = function ({
   }
 }
 
+const QUERY_NAME = '__remote-refresh__'
+
 async function replace(router: NextRouter, refresh: string | null) {
   const query = { ...router.query }
-  if (!refresh) delete query.refresh
-  else query.refresh = refresh
+  if (!refresh) delete query[QUERY_NAME]
+  else query[QUERY_NAME] = refresh
 
   return router.replace(
     {
