@@ -1,5 +1,5 @@
 const { useEffect } = require('react')
-const { useRouter, NextRouter } = require('next/router')
+const { useRouter } = require('next/router')
 const getConfig = require('next/config').default
 
 // private API, might break on the next version
@@ -35,7 +35,7 @@ module.exports.useRemoteRefresh = function ({
 
 const QUERY_NAME = '__remote-refresh__'
 
-async function replace(router: NextRouter, refresh: string | null) {
+async function replace(router, refresh) {
   const query = { ...router.query }
   if (!refresh) delete query[QUERY_NAME]
   else query[QUERY_NAME] = refresh
