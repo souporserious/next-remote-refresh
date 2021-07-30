@@ -5,6 +5,7 @@
   "author": "Travis Arnold",
   "license": "MIT",
   "main": "index.js",
+  "types": "types.d.ts",
   "files": [
     "hook.js",
     "server.js"
