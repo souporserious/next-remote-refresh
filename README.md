@@ -63,7 +63,7 @@ export function getStaticProps() {
 ## Development
 
 ```bash
-yarn install && yarn build && yarn link
+yarn install && yarn link
 cd example
 yarn install && yarn link next-remote-refresh
 yarn dev
