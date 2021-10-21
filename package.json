@@ -1,6 +1,6 @@
 {
   "name": "next-remote-refresh",
-  "version": "0.5.6",
+  "version": "0.5.7",
   "description": "Enables Fast Refresh for remote data in NextJS.",
   "author": "Travis Arnold",
   "license": "MIT",
@@ -8,7 +8,8 @@
   "types": "types.d.ts",
   "files": [
     "hook.js",
-    "server.js"
+    "server.js",
+    "types.d.ts"
   ],
   "repository": {
     "type": "git",
