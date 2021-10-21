@@ -65,6 +65,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "thebearingedge",
+      "name": "Tim Davis",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7432943?v=4",
+      "profile": "https://timdav.is/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
