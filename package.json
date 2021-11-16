@@ -1,6 +1,6 @@
 {
   "name": "next-remote-refresh",
-  "version": "0.5.7",
+  "version": "0.6.0",
   "description": "Enables Fast Refresh for remote data in NextJS.",
   "author": "Travis Arnold",
   "license": "MIT",
@@ -32,8 +32,8 @@
     "react-dom": "^17.0.2"
   },
   "dependencies": {
-    "express": "^4.17.1",
     "chokidar": "^3.5.2",
+    "express": "^4.17.1",
     "ws": "^8.2.3"
   }
 }
