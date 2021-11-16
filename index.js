@@ -11,7 +11,7 @@ module.exports = function plugin(options) {
 
       nextConfig.publicRuntimeConfig = {
         ...nextConfig.publicRuntimeConfig,
-        __remoteRefreshPath: `http://localhost:${port}/refresh`,
+        __remoteRefreshPort: port,
       }
     }
 
