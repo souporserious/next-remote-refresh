@@ -1,10 +1,6 @@
 # next-remote-refresh
 
-Utilize Fast Refresh for remote data in NextJS.
-
-<small>
-⚠️ This solution relies on undocumented APIs and may break in future NextJS updates.
-</small>
+Utilize Fast Refresh for remote data in NextJS. See the [example](/example) for setup.
 
 ## Install
 
