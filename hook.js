@@ -13,12 +13,12 @@ module.exports.useRemoteRefresh = function ({ shouldRefresh } = {}) {
     useEffect(() => {
       const ws = ws.current
       const listener = (event) => {
-        if (shouldRefresh(event.data)) {
+        if (!shouldRefresh || shouldRefresh(event.data)) {
           router.replace(router.asPath)
         }
       }
       ws.addEventListener('message', listener)
       return () => ws.removeEventListener('message', listener)
-    }, [router.asPath])
+    }, [shouldRefresh, router.asPath])
   }
 }
