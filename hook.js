@@ -1,5 +1,5 @@
-const { useEffect } = require('react')
-const { useRef, useRouter } = require('next/router')
+const { useEffect, useRef } = require('react')
+const { useRouter } = require('next/router')
 
 module.exports.useRemoteRefresh = function ({ shouldRefresh } = {}) {
   if (process.env.NODE_ENV !== 'production') {
@@ -11,14 +11,14 @@ module.exports.useRemoteRefresh = function ({ shouldRefresh } = {}) {
       return () => ws.close()
     }, [])
     useEffect(() => {
-      const ws = ws.current
+      const ws = wsRef.current
       const listener = (event) => {
-        if (shouldRefresh(event.data)) {
+        if (!shouldRefresh || shouldRefresh(event.data)) {
           router.replace(router.asPath)
         }
       }
       ws.addEventListener('message', listener)
       return () => ws.removeEventListener('message', listener)
-    }, [router.asPath])
+    }, [shouldRefresh, router.asPath])
   }
 }
