@@ -1,21 +1,24 @@
 const { useEffect } = require('react')
-const { useRouter } = require('next/router')
+const { useRef, useRouter } = require('next/router')
 
-module.exports.useRemoteRefresh = function ({
-  shouldRefresh = (updatedPath) => true,
-} = {}) {
+module.exports.useRemoteRefresh = function ({ shouldRefresh } = {}) {
   if (process.env.NODE_ENV !== 'production') {
     const router = useRouter()
+    const wsRef = useRef()
     useEffect(() => {
-      const ws = new WebSocket(
-        `ws://localhost:${process.env.remoteRefreshPort}/ws`
-      )
-      ws.onmessage = (event) => {
+      const ws = new WebSocket(`ws://localhost:${process.env.remoteRefreshPort}/ws`)
+      wsRef.current = ws
+      return () => ws.close()
+    }, [])
+    useEffect(() => {
+      const ws = ws.current
+      const listener = (event) => {
         if (shouldRefresh(event.data)) {
           router.replace(router.asPath)
         }
       }
-      return () => ws.close()
-    }, [])
+      ws.addEventListener('message', listener)
+      return () => ws.removeEventListener('message', listener)
+    }, [router.asPath])
   }
 }

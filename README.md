@@ -88,6 +88,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://arnavgosain.com"><img src="https://avatars.githubusercontent.com/u/12715704?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arnav Gosain</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=arn4v" title="Code">💻</a></td>
     <td align="center"><a href="https://timdav.is/"><img src="https://avatars.githubusercontent.com/u/7432943?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tim Davis</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=thebearingedge" title="Code">💻</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/kherock"><img src="https://avatars.githubusercontent.com/u/4993980?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kyle Herock</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=kherock" title="Code">💻</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->

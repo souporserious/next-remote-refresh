@@ -5,11 +5,11 @@
   "author": "Travis Arnold",
   "license": "MIT",
   "main": "index.js",
-  "types": "types.d.ts",
   "files": [
     "hook.js",
+    "hook.d.ts",
     "server.js",
-    "types.d.ts"
+    "server.d.ts"
   ],
   "repository": {
     "type": "git",
