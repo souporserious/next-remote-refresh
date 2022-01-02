@@ -5,4 +5,4 @@ interface PluginOptions {
   ignored?: string
 }
 
-export default function plugin(options: PluginOptions): (nextConfig: NextConfig) => NextConfig
+export default function plugin (options: PluginOptions): (nextConfig: NextConfig) => NextConfig

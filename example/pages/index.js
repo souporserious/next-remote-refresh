@@ -27,7 +27,7 @@ export default function Index({ name, version, description }) {
 export function getStaticProps() {
   return {
     props: JSON.parse(
-      fs.readFileSync(path.resolve(process.cwd(), '../package.json'), 'utf-8')
+      fs.readFileSync(path.resolve(process.cwd(), '../package.json'), 'utf-8'),
     ),
   }
 }
