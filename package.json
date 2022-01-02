@@ -8,8 +8,8 @@
   "files": [
     "hook.js",
     "hook.d.ts",
-    "server.js",
-    "server.d.ts"
+    "index.d.ts",
+    "server.js"
   ],
   "repository": {
     "type": "git",
