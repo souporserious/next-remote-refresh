@@ -1,5 +1,5 @@
 interface HookOptions {
-  shouldRefresh?: (updatedPath: string, currentPath: string) => boolean
+  shouldRefresh?: (updatedPath: string) => boolean
 }
 
 export function useRemoteRefresh (options?: HookOptions): void

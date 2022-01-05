@@ -14,6 +14,6 @@ rules:
     - named: never
   
 overrides:
-  - files: __tests__/**/*
+  - files: [__mocks__/**/*, __tests__/**/*, '**/*.test.*']
     env:
       jest: true
