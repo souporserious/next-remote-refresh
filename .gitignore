@@ -1,3 +1,5 @@
 .DS_Store
 .next
+*.log
 node_modules
+coverage

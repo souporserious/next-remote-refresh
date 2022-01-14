@@ -1,0 +1,19 @@
+env:
+  browser: true
+  node: true
+extends:
+  - standard-with-typescript
+parserOptions:
+  project: tsconfig.json
+rules:
+  comma-dangle:
+    - error
+    - always-multiline
+  space-before-function-paren:
+    - error
+    - named: never
+  
+overrides:
+  - files: [__mocks__/**/*, __tests__/**/*, '**/*.test.*']
+    env:
+      jest: true
