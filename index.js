@@ -5,8 +5,8 @@ module.exports = function plugin(options) {
 
   return function withConfig(nextConfig = {}) {
     if (process.env.NODE_ENV !== 'production') {
-      if (!port) {
-        port = createServer(options)
+      if (port === undefined) {
+        ({ port } = createServer(options).address())
       }
 
       if (nextConfig.env === undefined) {
