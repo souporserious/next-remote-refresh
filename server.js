@@ -1,29 +1,21 @@
-const path = require('path')
-const WebSocket = require('ws')
 const chokidar = require('chokidar')
+const WebSocket = require('ws')
 
 module.exports = function createServer({ paths, ignored }) {
   const wss = new WebSocket.Server({ port: 0 })
   let sockets = []
 
   const watcher = chokidar
-    .watch(
-      (Array.isArray(paths) ? paths : [paths]).map((filePath) =>
-        path.resolve(process.cwd(), filePath),
-      ),
-      { ignored },
-    )
-    .on('change', (filePath) => {
-      const baseName = path.basename(path.dirname(process.cwd()))
-      const updatedPath = `${baseName}${filePath.split(baseName)[1]}`
-      console.log(`[remote-refresh] ${path.basename(filePath)} updated`)
-      sockets.map((socket) => socket.send(updatedPath))
+    .watch(paths, { ignored, cwd: process.cwd() })
+    .on('all', (event, filePath) => {
+      console.log(`[remote-refresh] ${filePath} updated`)
+      sockets.map((socket) => socket.send(filePath))
     })
 
   return wss
     .on('listening', () => {
       console.log(
-      `[remote-refresh] server is listening at port ${wss.address().port}`,
+        `[remote-refresh] server is listening at port ${wss.address().port}`,
       )
     })
     .on('connection', (ws) => {

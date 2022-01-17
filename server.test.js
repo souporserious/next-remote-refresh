@@ -37,12 +37,12 @@ describe('server', () => {
     try {
       await once(socket, 'open')
 
-      watcherMock.emit('change', '/test/foo.txt')
+      watcherMock.emit('all', 'change', '/test/foo.txt')
 
       const [data] = await once(socket, 'message')
 
       // TODO: server sends `undefined` when a file changes outside of the working directory
-      expect(data.toString('utf8')).toMatch('undefined')
+      expect(data.toString('utf8')).toEqual('/test/foo.txt')
     } finally {
       socket.close()
     }
