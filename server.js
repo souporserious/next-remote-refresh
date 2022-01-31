@@ -6,7 +6,7 @@ module.exports = function createServer({ paths, ignored }) {
   let sockets = []
 
   const watcher = chokidar
-    .watch(paths, { ignored, cwd: process.cwd() })
+    .watch(paths, { cwd: process.cwd(), ignored, ignoreInitial: true })
     .on('all', (event, filePath) => {
       console.log(`[remote-refresh] ${filePath} updated`)
       sockets.map((socket) => socket.send(filePath))
