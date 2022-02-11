@@ -14,7 +14,7 @@ module.exports.useRemoteRefresh = function ({ shouldRefresh } = {}) {
       const ws = wsRef.current
       const listener = (event) => {
         if (!shouldRefresh || shouldRefresh(event.data)) {
-          router.replace(router.asPath)
+          router.replace(router.asPath, router.asPath, { scroll: false })
         }
       }
       ws.addEventListener('message', listener)
