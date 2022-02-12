@@ -1,3 +1,4 @@
+const path = require('path')
 const createServer = require('./server')
 
 module.exports = function plugin(options) {
@@ -14,6 +15,14 @@ module.exports = function plugin(options) {
       }
 
       nextConfig.env.remoteRefreshPort = port
+    }
+
+    nextConfig.webpack = (config) => {
+      config.module.rules.unshift({
+        test: /_app.*(js|jsx|ts|tsx)$/,
+        use: [{ loader: path.resolve(__dirname, 'loader') }],
+      })
+      return config
     }
 
     return nextConfig
