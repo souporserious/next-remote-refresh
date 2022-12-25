@@ -6,4 +6,4 @@ interface PluginOptions {
   signal?: AbortSignal
 }
 
-export default function plugin (options: PluginOptions): (nextConfig: NextConfig) => NextConfig
+export default function plugin (options: PluginOptions): (nextConfig: NextConfig) => Promise<NextConfig>
