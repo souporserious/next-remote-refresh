@@ -95,7 +95,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center"><a href="https://github.com/kherock"><img src="https://avatars.githubusercontent.com/u/4993980?v=4?s=100" width="100px;" alt="Kyle Herock"/><br /><sub><b>Kyle Herock</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=kherock" title="Code">💻</a></td>
       <td align="center"><a href="https://maggieliu.dev"><img src="https://avatars.githubusercontent.com/u/63619830?v=4?s=100" width="100px;" alt="Maggie Liu"/><br /><sub><b>Maggie Liu</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=maggie-j-liu" title="Code">💻</a></td>
-      <td align="center"><a href="https://pkerschbaum.com"><img src="https://avatars.githubusercontent.com/u/13141109?v=4?s=100" width="100px;" alt="Patrick Kerschbaum"/><br /><sub><b>Patrick Kerschbaum</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=pkerschbaum" title="Code">💻</a> <a href="#ideas-pkerschbaum" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center"><a href="https://pkerschbaum.com"><img src="https://avatars.githubusercontent.com/u/13141109?v=4?s=100" width="100px;" alt="Patrick Kerschbaum"/><br /><sub><b>Patrick Kerschbaum</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=pkerschbaum" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
