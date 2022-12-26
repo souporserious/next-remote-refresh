@@ -92,6 +92,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "pkerschbaum",
+      "name": "Patrick Kerschbaum",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13141109?v=4",
+      "profile": "https://pkerschbaum.com",
+      "contributions": [
+        "code",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
