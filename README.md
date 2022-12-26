@@ -82,19 +82,22 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
-  <tr>
-    <td align="center"><a href="https://github.com/souporserious"><img src="https://avatars.githubusercontent.com/u/2762082?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Travis Arnold</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=souporserious" title="Code">💻</a> <a href="https://github.com/souporserious/next-remote-refresh/commits?author=souporserious" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/joshwcomeau"><img src="https://avatars.githubusercontent.com/u/6692932?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joshua Comeau</b></sub></a><br /><a href="#ideas-joshwcomeau" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="https://fatihkalifa.com"><img src="https://avatars.githubusercontent.com/u/1614415?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Fatih Kalifa</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=pveyes" title="Code">💻</a> <a href="https://github.com/souporserious/next-remote-refresh/commits?author=pveyes" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://codedaily.io"><img src="https://avatars.githubusercontent.com/u/1714673?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jason Brown</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=browniefed" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://paco.sh"><img src="https://avatars.githubusercontent.com/u/34928425?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Paco</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=pacocoursey" title="Code">💻</a></td>
-    <td align="center"><a href="https://arnavgosain.com"><img src="https://avatars.githubusercontent.com/u/12715704?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arnav Gosain</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=arn4v" title="Code">💻</a></td>
-    <td align="center"><a href="https://timdav.is/"><img src="https://avatars.githubusercontent.com/u/7432943?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tim Davis</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=thebearingedge" title="Code">💻</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/kherock"><img src="https://avatars.githubusercontent.com/u/4993980?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kyle Herock</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=kherock" title="Code">💻</a></td>
-    <td align="center"><a href="https://maggieliu.dev"><img src="https://avatars.githubusercontent.com/u/63619830?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Maggie Liu</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=maggie-j-liu" title="Code">💻</a></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td align="center"><a href="https://github.com/souporserious"><img src="https://avatars.githubusercontent.com/u/2762082?v=4?s=100" width="100px;" alt="Travis Arnold"/><br /><sub><b>Travis Arnold</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=souporserious" title="Code">💻</a> <a href="https://github.com/souporserious/next-remote-refresh/commits?author=souporserious" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/joshwcomeau"><img src="https://avatars.githubusercontent.com/u/6692932?v=4?s=100" width="100px;" alt="Joshua Comeau"/><br /><sub><b>Joshua Comeau</b></sub></a><br /><a href="#ideas-joshwcomeau" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center"><a href="https://fatihkalifa.com"><img src="https://avatars.githubusercontent.com/u/1614415?v=4?s=100" width="100px;" alt="Fatih Kalifa"/><br /><sub><b>Fatih Kalifa</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=pveyes" title="Code">💻</a> <a href="https://github.com/souporserious/next-remote-refresh/commits?author=pveyes" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://codedaily.io"><img src="https://avatars.githubusercontent.com/u/1714673?v=4?s=100" width="100px;" alt="Jason Brown"/><br /><sub><b>Jason Brown</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=browniefed" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://paco.sh"><img src="https://avatars.githubusercontent.com/u/34928425?v=4?s=100" width="100px;" alt="Paco"/><br /><sub><b>Paco</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=pacocoursey" title="Code">💻</a></td>
+      <td align="center"><a href="https://arnavgosain.com"><img src="https://avatars.githubusercontent.com/u/12715704?v=4?s=100" width="100px;" alt="Arnav Gosain"/><br /><sub><b>Arnav Gosain</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=arn4v" title="Code">💻</a></td>
+      <td align="center"><a href="https://timdav.is/"><img src="https://avatars.githubusercontent.com/u/7432943?v=4?s=100" width="100px;" alt="Tim Davis"/><br /><sub><b>Tim Davis</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=thebearingedge" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://github.com/kherock"><img src="https://avatars.githubusercontent.com/u/4993980?v=4?s=100" width="100px;" alt="Kyle Herock"/><br /><sub><b>Kyle Herock</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=kherock" title="Code">💻</a></td>
+      <td align="center"><a href="https://maggieliu.dev"><img src="https://avatars.githubusercontent.com/u/63619830?v=4?s=100" width="100px;" alt="Maggie Liu"/><br /><sub><b>Maggie Liu</b></sub></a><br /><a href="https://github.com/souporserious/next-remote-refresh/commits?author=maggie-j-liu" title="Code">💻</a></td>
+      <td align="center"><a href="http://ajitid.com"><img src="https://avatars.githubusercontent.com/u/26769888?v=4?s=100" width="100px;" alt="Ajit"/><br /><sub><b>Ajit</b></sub></a><br /><a href="#ideas-ajitid" title="Ideas, Planning, & Feedback">🤔</a></td>
+    </tr>
+  </tbody>
 </table>
 
 <!-- markdownlint-restore -->
