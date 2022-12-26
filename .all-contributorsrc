@@ -92,6 +92,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "ajitid",
+      "name": "Ajit",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26769888?v=4",
+      "profile": "http://ajitid.com",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
