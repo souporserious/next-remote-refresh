@@ -25,7 +25,10 @@ const withRemoteRefresh = require('next-remote-refresh')({
   ignored: '**/*.json',
 })
 
-module.exports = withRemoteRefresh(nextConfig)
+module.exports = async () => {
+  const config = await withRemoteRefresh(nextConfig)
+  return config
+}
 ```
 
 ### `useRemoteRefresh` hook
