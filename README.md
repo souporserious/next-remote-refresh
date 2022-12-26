@@ -16,19 +16,19 @@ npm install next-remote-refresh --save-dev
 
 ### plugin
 
-Add and configure plugin in `next.config.js`:
+Add and configure plugin in `next.config.mjs`:
 
 ```js
-// next.config.js
-const withRemoteRefresh = require('next-remote-refresh')({
-  paths: [require('path').resolve(__dirname, './package.json')],
+// next.config.mjs
+import { resolve } from 'node:path'
+import createRemoteRefresh from 'next-remote-refresh'
+
+const withRemoteRefresh = createRemoteRefresh({
+  paths: [resolve(__dirname, './package.json')],
   ignored: '**/*.json',
 })
 
-module.exports = async () => {
-  const config = await withRemoteRefresh(nextConfig)
-  return config
-}
+export default withRemoteRefresh({ ...next config here })
 ```
 
 ### `useRemoteRefresh` hook
@@ -42,9 +42,11 @@ import path from 'path'
 
 function App({ name, version }) {
   const router = useRouter()
+  
   useRemoteRefresh({
     shouldRefresh: (path) => path.includes(router.query.slug),
   })
+  
   return (
     <div>
       Package: {name} Version: {version}
