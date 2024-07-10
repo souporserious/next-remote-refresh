@@ -20,7 +20,7 @@ describe('plugin', () => {
     const config = await withRemoteRefresh()
 
     expect(createServer).toHaveBeenCalledWith({ paths: '/test' })
-    expect(config.env).toEqual({ remoteRefreshPort: 2000 })
+    expect(config.env).toEqual({ remoteRefreshPort: '2000' })
   })
 
   it('preserves existing env entries', async () => {
@@ -34,7 +34,7 @@ describe('plugin', () => {
 
     const config = await withRemoteRefresh({ env: { foo: 'bar' } })
 
-    expect(config.env).toEqual({ foo: 'bar', remoteRefreshPort: 2000 })
+    expect(config.env).toEqual({ foo: 'bar', remoteRefreshPort: '2000' })
   })
 
   it('reuses an existing server instance', async () => {
@@ -56,7 +56,7 @@ describe('plugin', () => {
     const config2 = await withRemoteRefresh()
 
     expect(createServer).toHaveBeenCalledTimes(1)
-    expect(config1.env).toEqual({ remoteRefreshPort: 2000 })
-    expect(config2.env).toEqual({ remoteRefreshPort: 2000 })
+    expect(config1.env).toEqual({ remoteRefreshPort: '2000' })
+    expect(config2.env).toEqual({ remoteRefreshPort: '2000' })
   })
 })
