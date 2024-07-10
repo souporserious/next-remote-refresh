@@ -19,7 +19,7 @@ module.exports = function plugin(options) {
         nextConfig.env = {}
       }
 
-      nextConfig.env.remoteRefreshPort = port
+      nextConfig.env.remoteRefreshPort = String(port)
     }
 
     return nextConfig
